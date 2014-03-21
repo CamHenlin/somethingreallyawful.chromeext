@@ -1,0 +1,65 @@
+{
+  "name": "something really awful",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "420",
+  "homepage_url": "http://github.com/CamHenlin",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "http://forums.somethingawful.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://forums.somethingawful.com/*"
+      ],
+      "css": [
+        "css/MetroJs.min.css",
+        "css/custom.css"
+      ]
+    },
+    {
+      "matches": [
+        "http://forums.somethingawful.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js",
+        "js/jquery-2.1.0.min.js",
+        "js/underscore-min.js",
+        "js/backbone-min.js",
+        "js/MetroJs.min.js",
+        "js/somethingreallyawful.js",
+        "js/newpost.js",
+        "js/forums.js",
+        "js/posts.js",
+        "js/threads.js",
+        "js/script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+        "js/jquery-2.1.0.min.js",
+        "js/underscore-min.js",
+        "js/backbone-min.js",
+        "js/MetroJs.min.js",
+        "js/somethingreallyawful.js",
+        "js/newpost.js",
+        "js/forums.js",
+        "js/posts.js",
+        "js/threads.js",
+        "js/script.js",
+        "css/MetroJs.min.css",
+        "css/custom.css"
+  ]
+}
